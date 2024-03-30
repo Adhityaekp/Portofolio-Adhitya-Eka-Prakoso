@@ -2,6 +2,10 @@
    Basic Styles
 ================================================== */
 
+link {
+  display : none;
+}
+
 html {
   width: 100%;
   font-size: 100%;
