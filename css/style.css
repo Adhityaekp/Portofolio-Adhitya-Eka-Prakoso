@@ -136,14 +136,10 @@ header {
   backdrop-filter: blur(10px);
   position: fixed;
   width: 100%;
-  height: 100px;
   z-index: 1000;
-  padding-top: 40px;
-  padding-bottom: 10px;
 }
 
 header #logo a img {
-  padding-top: 20px;
   width: 50px;
   height: auto;
 }
