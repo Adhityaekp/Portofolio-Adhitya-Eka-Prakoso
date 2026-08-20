@@ -5,7 +5,9 @@ async function loadPartial(id, url) {
   el.innerHTML = await res.text();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  loadPartial('site-header', '/partials/header.html');
-  loadPartial('site-footer', '/partials/footer.html');
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadPartial('site-header', '/partials/header.html');
+  await loadPartial('site-footer', '/partials/footer.html');
+
+  initNavToggle(); // panggil setelah header ke-inject
 });
