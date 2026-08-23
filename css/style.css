@@ -3,7 +3,7 @@
 ================================================== */
 
 link {
-  display : none;
+  display: none;
 }
 
 html {
@@ -120,16 +120,88 @@ h7 {
 }
 
 /* ==================================================
+   Project Meta (Year / Role / Prototype)
+   -> override warna & alignment default h6 khusus
+      untuk blok meta di halaman detail project
+================================================== */
+
+#project-meta {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.8em;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+#project-meta p {
+  margin: 0;
+}
+
+#project-meta a {
+  color: #000;
+  text-decoration: underline;
+}
+
+#project-meta a:hover {
+  color: #777;
+}
+
+/* ==================================================
+   Project Tools (logo bahasa/software: Figma, PHP, dll)
+================================================== */
+
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.tool-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border: 1px solid #eaeaea;
+  border-radius: 30px;
+  background: #fafafa;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  color: #555;
+  line-height: 1;
+}
+
+.tool-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.tool-name {
+  white-space: nowrap;
+}
+
+/* ==================================================
+   About Page - Experience subtitle
+================================================== */
+
+.exp-subtitle {
+  display: inline-block;
+  font-size: 13px;
+  color: #b5b5b5;
+  letter-spacing: 0.5px;
+}
+
+/* ==================================================
    Margin Bottom Sets
 ================================================== */
 
 .margin-0 {
   margin-bottom: 0 !important;
 }
-
-/* ==================================================
-   Header
-================================================== */
 
 /* ==================================================
    Header
@@ -261,15 +333,14 @@ nav#menu #menu-nav li a:hover {
 #single-team .team-img {
   padding-top: 150px;
   margin-bottom: 3px;
-  text-align: center; 
+  text-align: center;
 }
 
 #single-team .team-img img {
-  max-width: 80%; 
-  height: auto; 
-  display: inline-block; 
+  max-width: 80%;
+  height: auto;
+  display: inline-block;
 }
-
 
 /* ==================================================
    Portfolio
@@ -277,17 +348,32 @@ nav#menu #menu-nav li a:hover {
 
 #portfolio img {
   width: 100%;
+  display: block;
+}
+
+#portfolio-projects {
+  width: 100%;
 }
 
 #projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
 
 #projects li {
   list-style: none;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
+
+/* Setiap kelipatan ke-1 dari grup 3 = full width */
+#projects li:nth-child(3n + 1) {
+  grid-column: 1 / -1;
+}
+
+/* item ke-2 dan ke-3 di tiap grup otomatis sebelahan karena grid 2 kolom */
 
 .item-project {
   position: relative;
