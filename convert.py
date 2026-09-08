@@ -13,7 +13,8 @@ SUPPORTED_FORMATS = {".jpg", ".jpeg", ".png"}
 
 # Cari semua gambar
 images = [
-    file for file in INPUT_DIR.iterdir()
+    file
+    for file in INPUT_DIR.iterdir()
     if file.is_file() and file.suffix.lower() in SUPPORTED_FORMATS
 ]
 
@@ -24,6 +25,14 @@ if not images:
 print(f"Ditemukan {len(images)} gambar.\n")
 
 for image_path in images:
+    # Nama output
+    output_path = OUTPUT_DIR / f"{image_path.stem}.webp"
+
+    # Jika WebP sudah ada, skip
+    if output_path.exists():
+        print(f"- Skip {image_path.name} → {output_path.name} (sudah ada)")
+        continue
+
     try:
         # Buka gambar
         image = Image.open(image_path)
@@ -33,9 +42,6 @@ for image_path in images:
             converted = image
         else:
             converted = image.convert("RGB")
-
-        # Nama output
-        output_path = OUTPUT_DIR / f"{image_path.stem}.webp"
 
         # Simpan WebP
         converted.save(

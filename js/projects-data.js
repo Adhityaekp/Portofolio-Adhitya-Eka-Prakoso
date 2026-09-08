@@ -22,6 +22,53 @@
 
 const PROJECTS = [
   {
+    slug: "supplier-mbg",
+    title: "Supplier MBG",
+    thumb: "webp/Project 12a.webp",
+    year: 2026,
+    role: "Golang Developer",
+    tools: ["Golang", "MySQL"],
+    prototypeUrl: "https://dev.supplier.cuaniaga.com",
+    description:
+      "Supplier MBG is a comprehensive supplier management system developed for PT Cuaniaga Innovation Technology. The platform is designed to streamline supplier interactions, manage procurement processes, and enhance overall supply chain efficiency. As a Golang Developer, I contributed to building the backend architecture, implementing RESTful APIs, integrating databases, and ensuring secure and efficient data handling to support the platform's functionality.",
+    images: ["webp/Project 12a.webp"],
+  },
+  {
+    slug: "cuanmarket",
+    title: "Cuanmarket",
+    thumb: "webp/Project 11a.webp",
+    year: 2026,
+    role: "Backend Developer",
+    tools: ["Golang", "MySQL"],
+    prototypeUrl: "https://app.cuaniaga.com",
+    description:
+      "Cuanmarket is an internal CRM and business management system developed for PT Cuaniaga Innovation Technology. The platform is designed to centralize and streamline key business operations, including product and inventory management, supplier management, purchasing, sales transactions, and operational reporting. As a Backend Developer, I contributed to developing the backend architecture, RESTful APIs, database integration, business logic, and role-based access control to support a scalable and reliable system.",
+    images: ["webp/Project 11a.webp"],
+  },
+  {
+    slug: "company-profile-indonesia-learning-center",
+    title: "Company Profile Indonesia Learning Center",
+    thumb: "webp/Project 10a.webp",
+    year: 2025,
+    role: "Wordpress Developer",
+    tools: ["Wordpress", "Elementor", "Figma"],
+    prototypeUrl: "https://ilcbeyond.com",
+    description:
+      "Company Profile website for Indonesia Learning Center, designed to provide comprehensive information about the organization, its mission, services, and achievements. The website serves as a digital representation of the company's identity and values, offering visitors an engaging and informative experience.",
+    images: ["webp/Project 10a.webp"],
+  },
+  {
+    slug: "test-recruitment-indonesia-learning-center",
+    title: "Test Recruitment Indonesia Learning Center",
+    thumb: "webp/Project 9a.webp",
+    year: 2025,
+    role: "Full Stack Developer",
+    tools: ["Laravel", "MySQL", "Figma"],
+    prototypeUrl: "https://recruitment.ilcbeyond.sch.id",
+    description: "Platform tes psikotes yang dikembangkan untuk mendukung proses rekrutmen di Indonesia Learning Center. Sistem ini digunakan untuk membantu proses seleksi kandidat melalui beberapa tahapan tes secara online.",
+    images: ["webp/Project 9a.webp"],
+  },
+  {
     slug: "halo-ternak", // dipakai di URL: project.html?slug=halo-ternak
     title: "Halo Ternak",
     thumb: "webp/Project 8a.webp", // gambar thumbnail di grid index
